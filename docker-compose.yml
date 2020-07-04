@@ -14,7 +14,7 @@ services:
     env_file:
       - backend/env/.env.dev
     volumes:
-      - .:/app
+      - ./backend:/app
       - static_data:/srv
     depends_on:
       - mysql

@@ -42,7 +42,7 @@ RUN pipenv install --system --ignore-pipfile
 COPY docker-entrypoint.sh ./docker-entrypoint.sh
 
 # Add current directory code to working directory
-COPY . .
+COPY . /app
 EXPOSE 8000
 
 #RUN python manage.py migrate

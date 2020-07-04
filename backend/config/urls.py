@@ -21,7 +21,7 @@ from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework_simplejwt.views import TokenVerifyView, TokenRefreshView, TokenObtainPairView
 
-from backend.apps.landing_view import index
+from apps.landing_view import index
 
 urlpatterns = [
     url(r'^$', index, name='index'),
