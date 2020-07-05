@@ -32,6 +32,8 @@ services:
       - static_data:/srv:ro  # ro readonly
   angular:
     build: angular
+    volumes:
+      - ./angular:/app
     ports:
       - "8080:80"
 volumes:

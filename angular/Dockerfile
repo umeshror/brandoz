@@ -21,7 +21,7 @@ COPY . /app
 ARG configuration=production
 
 # Build app
-RUN npm run build --output-path=./dist/out --configuration $configuration
+RUN npm run build -- --output-path=./dist/out --configuration $configuration
 
 
 ### Stage 2: delivery ###
