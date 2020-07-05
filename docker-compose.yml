@@ -30,6 +30,10 @@ services:
       - ./mysql_data:/var/lib/mysql
 #      - ./config/nginx:/etc/nginx/conf.d
       - static_data:/srv:ro  # ro readonly
+  angular:
+    build: angular
+    ports:
+      - "8080:80"
 volumes:
   mysql_data:
   static_data:
