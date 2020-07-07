@@ -12,10 +12,10 @@ services:
   app:
     build: backend
     env_file:
-      - backend/env/.env.dev
+      - ./backend/env/.env.dev
     volumes:
       - ./backend:/app
-      - static_data:/srv
+      - static_data:/srv/static
     depends_on:
       - mysql
     expose:
@@ -28,14 +28,18 @@ services:
       - app
     volumes:
       - ./mysql_data:/var/lib/mysql
-#      - ./config/nginx:/etc/nginx/conf.d
-      - static_data:/srv:ro  # ro readonly
+      - static_data:/srv/static:ro  # ro readonly
   angular:
-    build: angular
+    build:
+      context: angular
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - app
     volumes:
-      - ./angular:/app
+       - ./angular:/app/
+       - /app/node_modules
     ports:
-      - "8080:80"
+      - "4200:4200"
 volumes:
   mysql_data:
   static_data:

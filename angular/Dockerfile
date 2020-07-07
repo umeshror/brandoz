@@ -9,7 +9,6 @@ WORKDIR /app
 # Copy app dependencies.
 COPY package.json .
 COPY package-lock.json .
-#angular-app/package-lock.json /app/angular-app/
 
 # Install app dependencies.
 RUN npm install
