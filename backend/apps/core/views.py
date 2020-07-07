@@ -47,7 +47,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class GroupViewSet(ModelViewSet):
-    permission_classes = (IsAuthenticated, TokenHasReadWriteScope,)
+    permission_classes = (AllowAny, )
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 

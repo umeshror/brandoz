@@ -8,11 +8,14 @@ import {LoginFormComponent} from './login-form/login-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {GroupComponent} from './group/group.component';
+import {GroupService} from './group/group.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    GroupComponent
   ],
   imports: [
     BrowserModule,

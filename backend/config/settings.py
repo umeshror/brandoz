@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'oauth2_provider',
+    'corsheaders',
 
     # Local Apps
     'apps.core'
@@ -66,7 +67,10 @@ OAUTH2_PROVIDER = {
     'SCOPES': {'read': 'Read scope',
                'write': 'Write scope'}
 }
-
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:4200',
+    'http://localhost:8080',
+)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -75,6 +79,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
