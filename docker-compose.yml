@@ -10,6 +10,7 @@ services:
     volumes:
       - ./mysql_data:/var/lib/mysql
   app:
+    container_name: app
     build: backend
     env_file:
       - ./backend/env/.env.dev
@@ -30,6 +31,7 @@ services:
       - ./mysql_data:/var/lib/mysql
       - static_data:/srv/static:ro  # ro readonly
   angular:
+    container_name: angular
     build:
       context: angular
       dockerfile: Dockerfile.dev

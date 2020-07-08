@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # Local Apps
-    'apps.core'
+    'apps.core',
+    'apps.task'
 ]
 
 REST_FRAMEWORK = {

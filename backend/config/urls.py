@@ -24,12 +24,11 @@ from rest_framework_simplejwt.views import TokenVerifyView, TokenRefreshView, To
 
 urlpatterns = [
     url(r'^$', index, name='index'),
+    url('api/', include('apps.core.urls'), name='core_urls'),
+    url('api/task/', include('apps.task.urls'), name='task_urls'),
 
-    # path('api', include('apps.core.urls')),
-    url('api/', include('apps.core.urls'), name='api_urls'),
     # auth
     url(r'^auth/token/', CustomAuthToken.as_view(), name='token_auth'),
-
     # jwt
     path('jwt/token/', TokenObtainPairView.as_view(), name='jwt_token_obtain_pair'),
     path('jwt/token/refresh/', TokenRefreshView.as_view(), name='jwt_token_refresh'),
