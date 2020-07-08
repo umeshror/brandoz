@@ -9,13 +9,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GroupComponent} from './group/group.component';
-import {GroupService} from './group/group.service';
+import {TaskListComponent} from './task-list/task-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    GroupComponent
+    GroupComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
