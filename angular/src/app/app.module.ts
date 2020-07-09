@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LoginFormComponent} from './login-form/login-form.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GroupComponent} from './group/group.component';
@@ -24,7 +24,9 @@ import {TaskListComponent} from './task-list/task-list.component';
     ReactiveFormsModule,
     MaterialModule,
     BrowserAnimationsModule,
-    HttpClientModule],
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule],
 
   providers: [],
   bootstrap: [AppComponent]
