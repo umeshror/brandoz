@@ -4,17 +4,22 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {LoginFormComponent} from './login-form/login-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GroupComponent} from './group/group.component';
 import {TaskListComponent} from './task-list/task-list.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {HomeComponent} from './core/home';
+import {LoginComponent} from './core/login';
+import {RegisterComponent} from './core/register';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
     GroupComponent,
     TaskListComponent
   ],
@@ -25,8 +30,9 @@ import {TaskListComponent} from './task-list/task-list.component';
     MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule],
+    FormsModule,
+    MatToolbarModule
+  ],
 
   providers: [],
   bootstrap: [AppComponent]
