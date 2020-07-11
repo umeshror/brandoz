@@ -10,9 +10,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GroupComponent} from './group/group.component';
 import {TaskListComponent} from './task-list/task-list.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {HomeComponent} from './core/home';
 import {LoginComponent} from './core/login';
 import {RegisterComponent} from './core/register';
+import {HomeComponent} from './home';
 
 @NgModule({
   declarations: [
