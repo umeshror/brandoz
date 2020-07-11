@@ -1,13 +1,13 @@
 from django.contrib.auth.models import Group
-from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope
 from rest_framework import serializers
-from rest_framework.generics import CreateAPIView
-from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
-from rest_framework.viewsets import ModelViewSet
-from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.generics import CreateAPIView
+from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.response import Response
-from apps.core.models import User
+from rest_framework.viewsets import ModelViewSet
+
+from ..core.models import User
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -47,7 +47,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class GroupViewSet(ModelViewSet):
-    permission_classes = (AllowAny, )
+    permission_classes = (AllowAny,)
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 

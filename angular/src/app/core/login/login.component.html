@@ -1,3 +1,6 @@
+<div *ngIf="error" class="alert alert-danger">{{error}}</div>
+<div *ngIf="success" class="alert alert-success">{{success}}</div>
+
 <div class="mat-action-row">
   <h2>Login</h2>
   <div *ngIf="error" class="mat-error">{{error}}</div>
